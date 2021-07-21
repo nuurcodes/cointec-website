@@ -1,0 +1,118 @@
+.no-access-page {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 135px;
+	.content-wrapper {
+		width: 434px;
+		margin: auto;
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+			padding: 0 20px;
+		}
+		.sg-logo {
+			margin-bottom: 24px;
+			img {
+				max-width: 118px;
+			}
+		}
+	}
+}
+
+.alert-box {
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+	border-radius: 3px;
+	.alert-header {
+		padding: 24px 32px;
+		border-bottom: 1px solid #d5dce0;
+		.heading {
+			font-weight: 600;
+			line-height: 13px;
+			font-size: 18px;
+			color: #1a1d1f;
+			margin: 0;
+			text-align: center;
+		}
+	}
+	.alert-body {
+		padding: 26px 32px;
+		.message-text {
+			font-weight: normal;
+			line-height: 31px;
+			font-size: 16px;
+			color: #667075;
+			margin: 0;
+			a {
+				font-weight: 600;
+			}
+		}
+		form {
+			.field-wrapper {
+				margin-top: 32px;
+				.field-label {
+					display: block;
+					font-weight: 600;
+					line-height: 10px;
+					font-size: 14px;
+					color: #1a1d1f;
+					margin-bottom: 13px;
+				}
+				input {
+					border: 1px solid #b0b9bd;
+					border-radius: 3px;
+					font-weight: 600;
+					line-height: 12px;
+					font-size: 16px;
+					color: #1a1d1f;
+					@include placeholder {
+						color: #b0b9bd;
+					}
+					&:active,
+					&:focus-within {
+						border: 1px solid #0459c4;
+						box-shadow: none;
+					}
+					&:disabled {
+						color: #515c61;
+						background: #f0f3f5;
+						border: none;
+					}
+				}
+				&.invalid {
+					.field-label {
+						color: #d7263d;
+					}
+					input {
+						border: 1px solid #d7263d;
+					}
+				}
+				&.edit {
+					position: relative;
+					&::after {
+						content: 'edit';
+						position: absolute;
+						top: 30px;
+						right: 12px;
+					}
+				}
+			}
+			.btn {
+				font-weight: 600;
+				line-height: 12px;
+				font-size: 16px;
+				padding-top: 17px;
+				padding-bottom: 17px;
+				border-radius: 3px;
+				&:hover,
+				&:focus,
+				&:active {
+					box-shadow: none;
+				}
+				&:disabled {
+					border: none;
+					background-color: #b0b9bd;
+				}
+			}
+		}
+	}
+}

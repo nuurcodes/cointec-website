@@ -1,0 +1,85 @@
+footer {
+	background-color: $mid-color;
+	padding-top: 66px;
+	@include media-breakpoint-down(md) {
+		padding-top: 48px;
+	}
+	hr {
+		border-top: 1px solid #e8eaeb;
+		@include media-breakpoint-down(xs) {
+			border-top: 1px solid #d5dce0;
+		}
+	}
+	.container {
+		@include media-breakpoint-down(xs) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.footer-logo {
+		margin-bottom: 4px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 46px;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 21px;
+		}
+	}
+	a {
+		display: block;
+		color: #667075;
+		// color: #76828f;
+		font-size: 1rem;
+		line-height: 33px;
+		text-decoration: none;
+		&:hover {
+			color: #32325d;
+			text-decoration: underline;
+		}
+	}
+	.links-wrapper {
+		margin-bottom: 43px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 35px;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 86px;
+		}
+		.menu-heading {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 13px;
+			margin-bottom: 18px;
+			color: #1a1d1f;
+			@include media-breakpoint-down(xs) {
+				margin-top: 40px;
+			}
+		}
+	}
+	hr {
+		margin: 0;
+	}
+	.footer-bottom {
+		padding: 11px 15px;
+		overflow: hidden;
+		@include media-breakpoint-down(xs) {
+			padding: 14px 20px 20px;
+		}
+	}
+	.copyright,
+	.reg-info {
+		color: #667075;
+		margin: 0;
+		font-size: 14px;
+	}
+	.reg-info {
+		@include media-breakpoint-down(xs) {
+			line-height: 18px;
+		}
+	}
+	.copyright {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 16px;
+		}
+	}
+}

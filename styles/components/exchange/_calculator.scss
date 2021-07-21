@@ -1,0 +1,346 @@
+.main-calc-wrapper {
+	background: #ffffff;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+	border-radius: 3px;
+	padding: 32px;
+	min-height: 446px;
+	* {
+		font-weight: 600;
+	}
+	@include media-breakpoint-down(xs) {
+		padding: 24px;
+		min-height: auto;
+	}
+	.field-label {
+		display: block;
+		font-size: 14px;
+		line-height: 10px;
+		font-weight: 600;
+		color: #1a1d1f;
+		margin-bottom: 13px;
+	}
+	.calc-input-wrapper {
+		background-color: #fff;
+		padding-bottom: 32px;
+		.calc-field {
+			background: #ffffff;
+			border: 1px solid #b0b9bd;
+			border-radius: 3px;
+			padding: 12px 0;
+			display: flex;
+			height: 48px;
+			input {
+				font-size: 16px;
+				color: #040506;
+				line-height: normal;
+				height: auto;
+				@include placeholder {
+					color: #b0b9bd;
+				}
+			}
+			i {
+				position: absolute;
+				right: 0;
+				top: 5px;
+			}
+
+			&:active,
+			&:focus-within {
+				border: 1px solid #0459c4;
+			}
+			i {
+				position: absolute;
+				right: 0;
+				top: 5px;
+			}
+		}
+		.dropdown-currency-select {
+			height: 23px;
+			.dropdown-toggle {
+				vertical-align: initial;
+				.text-label {
+					// padding-left: 30px;
+					span {
+						line-height: 23px;
+					}
+				}
+				// img.dropdown-arrow {
+				// 	margin-right: 13px;
+				// }
+			}
+			.dropdown-menu {
+				width: 370px;
+				left: -200px;
+				* {
+					font-weight: 400;
+				}
+				// left: -229px;
+				@include media-breakpoint-down(xs) {
+					width: 222%;
+					left: -121%;
+				}
+				.search-item {
+					background: #e7ecee;
+					height: 48px;
+					.search-input {
+						font-weight: normal;
+						font-size: 1rem;
+						margin-left: 0;
+						@include placeholder {
+							font-weight: normal;
+							font-size: 1rem;
+							color: #515c61;
+						}
+					}
+				}
+				.dropdown-items-wrapper {
+					max-height: 192px;
+					padding: 0;
+					&::-webkit-scrollbar-track {
+						background: #e7ecee;
+					}
+					&::-webkit-scrollbar-thumb,
+					&::-webkit-scrollbar-thumb:hover {
+						background: #0459c4;
+					}
+					.dropdown-item {
+						height: 48px;
+						padding: 16px;
+						&:hover,
+						&:focus {
+							background: #f0f3f5;
+						}
+						.text-label {
+							padding: 0;
+							.currency-symbol-wrapper {
+								margin: 0 !important;
+								padding: 0;
+								img.currency-symbol {
+									width: 16px;
+									height: 16px;
+								}
+								color: #1a1d1f;
+								line-height: 11px;
+								font-size: 16px;
+								b {
+									font-weight: 600;
+									font-size: 14px;
+								}
+								&.fluid {
+									width: 100%;
+									img.currency-symbol {
+										margin-right: 8px;
+									}
+								}
+							}
+						}
+
+						.currency-label {
+							justify-content: flex-start;
+						}
+						// .currency-label {
+						// 	padding: 0;
+						// 	.currency-symbol-wrapper {
+						// 		margin-right: 8px;
+						// 		.currency-symbol {
+						// 			width: 16px;
+						// 			height: 16px;
+						// 		}
+						// 	}
+						// 	span {
+						// 		margin-top: 3px;
+						// 		line-height: 11px;
+						// 		font-size: 16px;
+						// 		font-weight: normal;
+						// 		color: #1a1d1f;
+						// 		&.name {
+						// 			margin-left: auto;
+						// 			font-size: 14px;
+						// 			font-weight: 600;
+						// 			color: #1a1d1f;
+						// 		}
+						// 	}
+						// }
+					}
+				}
+			}
+			.text-label {
+				color: #000;
+				display: flex;
+				justify-content: center;
+				padding-left: 15px;
+				.currency-symbol-wrapper {
+					margin-right: 8px;
+					width: 26px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-left: auto;
+					img.currency-symbol {
+						width: 20px;
+						height: 20px;
+					}
+				}
+				.dropdown-arrow {
+					margin-left: 8px;
+					margin-right: 13px;
+				}
+			}
+		}
+		&.invalid {
+			.field-label {
+				color: #db3a34;
+			}
+			.calc-field {
+				border: 1px solid #db3a34;
+			}
+		}
+	}
+	// .field-value {
+	// 	font-size: 18px;
+	// 	color: #045cc7;
+	// }
+	// .wallet-field {
+	// 	cursor: pointer;
+	// 	background: none;
+	// 	border: none;
+	// 	padding: 0;
+	// 	outline: none;
+	// 	&:hover {
+	// 		box-shadow: none;
+	// 	}
+	// }
+	.accounts-select {
+		box-shadow: 0px 2px 4px rgba(0, 16, 33, 0.06);
+		border-radius: 2px;
+		border: 1px solid #b0b9bd;
+		height: 48px;
+		color: #b0b9bd;
+		// &:focus,
+		// &:focus-within {
+		// 	border: 1px solid #9e00ff;
+		// }
+		background: none;
+	}
+	.accounts-dropdown {
+		border: 1px solid #b0b9bd;
+		border-radius: 3px;
+		font-weight: 600;
+		line-height: 20px;
+		font-size: 16px;
+		padding: 11px 12px;
+		color: #b0b9bd;
+		.dropdown-toggle {
+			width: 100%;
+			display: block;
+			padding: 0;
+			.account-source {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				display: inline-block;
+				width: 265px;
+				overflow: hidden;
+			}
+			i {
+				padding: 4px 0;
+				position: absolute;
+				right: 13px;
+			}
+			&::after {
+				content: none;
+			}
+		}
+		.dropdown-menu {
+			width: 100%;
+			background: #ffffff;
+			box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.13);
+			border-radius: 3px;
+			left: -12px !important;
+			top: 12px !important;
+			padding: 0;
+			.accounts-list {
+				overflow-y: scroll;
+				max-height: 192px;
+				&::-webkit-scrollbar {
+					width: 5px;
+				}
+				&::-webkit-scrollbar-track {
+					background: #e7ecee;
+				}
+				&::-webkit-scrollbar-thumb,
+				&::-webkit-scrollbar-thumb:hover {
+					background: #0459c4;
+				}
+			}
+			.add-bank-account {
+				background: #e7ecee;
+				padding: 18px 16px;
+				color: #1a1d1f;
+				font-weight: normal;
+				cursor: pointer;
+				.add-account-icon {
+					position: absolute;
+					right: 13px;
+					bottom: 14px;
+				}
+			}
+			.dropdown-item {
+				padding: 14px 16px;
+				&:hover {
+					background: #f0f3f5;
+				}
+				.bank-account-name {
+					max-width: 200px;
+					font-size: 16px;
+					line-height: 20px;
+					font-weight: normal;
+					color: #1a1d1f;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-align: left;
+				}
+				.bank-account-sortcode {
+					font-size: 14px;
+					line-height: 20px;
+					color: #1a1d1f;
+				}
+			}
+		}
+	}
+	.exchange-rate {
+		text-align: left;
+		color: #045cc7;
+		line-height: 12px;
+		margin-bottom: 20px;
+	}
+	.btn-exchange {
+		color: white;
+		background: #29be60;
+		border-radius: 3px;
+		// font-size: 20px;
+		font-size: 16px;
+		height: 48px;
+		cursor: pointer;
+		outline: none;
+		&:hover {
+			background: rgb(35, 167, 83);
+		}
+		&:disabled {
+			// color: #a0a0a0;
+			color: #fff;
+			background: #b0b9bd;
+			// background: #e1e5e7;
+			cursor: default;
+		}
+	}
+	.no-border {
+		border: 0px !important;
+		box-shadow: none !important;
+	}
+}
+.restart-link {
+	color: #db3a34 !important;
+	font-weight: 600;
+	cursor: pointer;
+}

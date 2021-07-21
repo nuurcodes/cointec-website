@@ -1,0 +1,328 @@
+.signin-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #f7f9fa;
+	.sg-logo {
+		img {
+			height: 35px;
+			margin-top: 112px;
+			margin-bottom: 117px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			img {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+.form-wrapper {
+	width: 448px;
+	background: #ffffff;
+	border: 1px solid #e8eaeb;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 8px rgba(0, 16, 33, 0.05);
+	border-radius: 2px;
+	position: relative;
+	margin: -80px auto auto;
+	.form-heading-wrapper {
+		padding: 29px 36px 22px 36px;
+		.form-heading {
+			font-weight: 600;
+			line-height: normal;
+			color: #061a40;
+			margin: 0;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 24px 24px 22px 24px;
+		}
+	}
+	hr {
+		border-top: 1px solid #e8eaeb;
+		margin: 0;
+	}
+	form,
+	.als-content {
+		padding: 40px;
+		.heading-line {
+			font-weight: normal;
+			line-height: 28px;
+			font-size: 16px;
+			color: #5e6c78;
+			margin-bottom: 22px;
+		}
+		label {
+			font-weight: normal;
+			line-height: normal;
+			font-size: 16px;
+			color: #02182b;
+			margin: 0;
+		}
+		input[type='text'],
+		input[type='email'],
+		input[type='password'] {
+			height: 48px;
+			background: #ffffff;
+			border: 1px solid #8c969e;
+			border-radius: 3px;
+			line-height: normal;
+			padding: 0.75rem;
+			margin-top: 2px;
+			&:active,
+			&:focus {
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+				border: 1px solid #045cc7;
+			}
+			@include placeholder {
+				font-size: 17px;
+				line-height: normal;
+				color: #a9b3bb;
+			}
+			&[type='password'] {
+				letter-spacing: 0.2rem;
+				padding-right: 35px;
+			}
+			&[name='password'] {
+				@include placeholder {
+					letter-spacing: 0.2rem;
+				}
+			}
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover,
+			&:-webkit-autofill:focus {
+				box-shadow: 0 0 0 30px white inset;
+			}
+		}
+		input[type='checkbox'] {
+			position: absolute;
+			opacity: 0;
+			z-index: 1;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+			margin-top: 4px;
+
+			& + label {
+				position: relative;
+				padding: 0;
+			}
+
+			& + label:before {
+				content: '';
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: text-top;
+				width: 16px;
+				height: 16px;
+				border: 1px solid #a9b3bb;
+				border-radius: 2px;
+				background: white;
+				margin-top: 1px;
+			}
+
+			&:checked + label:before {
+				border: none;
+				background: #045cc7;
+			}
+
+			&:checked + label:after {
+				content: '';
+				position: absolute;
+				left: 3px;
+				top: 8px;
+				background: white;
+				width: 2px;
+				height: 2px;
+				box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+					4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+				transform: rotate(45deg);
+			}
+		}
+		.agree-statment {
+			label {
+				font-weight: normal;
+				line-height: normal;
+				color: #70808d;
+				margin: 0;
+				a {
+					color: #2270ce;
+					font-weight: 600;
+				}
+			}
+		}
+		.form-group {
+			margin-bottom: 22px;
+		}
+		.show-password {
+			position: absolute;
+			top: 16px;
+			right: 15px;
+			color: #a9b3bb;
+			outline: none;
+			&:active,
+			&:focus {
+				color: #70808d;
+			}
+		}
+		a {
+			font-weight: normal;
+			line-height: normal;
+			font-size: 16px;
+			text-align: right;
+			color: #70808d;
+		}
+		button {
+			height: 48px;
+			width: 100%;
+			background: #045cc7;
+			border-radius: 3px;
+			font-weight: normal;
+			line-height: normal;
+			font-size: 17px;
+			text-align: center;
+			color: #ffffff;
+			cursor: pointer;
+			outline: none;
+			margin-top: 25px;
+			&:active,
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+			&:disabled {
+				cursor: not-allowed;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 24px;
+		}
+		padding-top: 24px;
+		.form-group {
+			margin-bottom: 22px;
+			label {
+				font-weight: normal;
+				line-height: normal;
+				font-size: 16px;
+				color: #02182b;
+				margin: 0;
+			}
+		}
+		.heading {
+			margin-bottom: 0;
+		}
+		.email {
+			font-size: 16px;
+			color: #5e6c78;
+			font-weight: bold;
+			margin-bottom: 36px;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		width: calc(100% - 32px);
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+
+	form {
+		.typing-validator {
+			position: absolute;
+			left: 1px;
+			right: 1px;
+			bottom: 1px;
+			overflow: hidden;
+			height: 0px;
+			transition: height 300ms;
+			& > div {
+				height: 38px;
+				background: #f0f4f7;
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+				padding: 5px 10px;
+				color: #a9b3bb;
+				transition: background 250ms, color 250ms;
+			}
+		}
+		input[type='text'].password,
+		input[type='password'].password {
+			height: 48px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			line-height: 22px;
+			transition: all 0.4s;
+			&:focus {
+				padding-top: 12px;
+				padding-bottom: 50px;
+				height: 86px;
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+			}
+			&:focus + * + .typing-validator {
+				height: 38px;
+			}
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover,
+			&:-webkit-autofill:focus {
+				transition: background-color 5000s ease-in-out 0s;
+			}
+		}
+	}
+
+	.form-group.valid {
+		input[type='text'].password,
+		input[type='password'].password {
+			padding-top: 12px;
+			padding-bottom: 50px;
+			height: 86px;
+			border: 1px solid #2ed06e !important;
+		}
+		.typing-validator {
+			height: 38px;
+			& > div {
+				background: #d6f5e2;
+				color: #2ed06e;
+			}
+		}
+	}
+	.form-group.invalid {
+		& > label {
+			color: #d7263d;
+		}
+		input[type='text'],
+		input[type='email'],
+		input[type='password'] {
+			border: 1px solid #d7263d;
+		}
+		input[type='text'].password,
+		input[type='password'].password {
+			padding-top: 12px;
+			padding-bottom: 50px;
+			height: 86px;
+			border: 1px solid #d7263d !important;
+		}
+		.typing-validator {
+			height: 38px;
+			& > div {
+				background: rgba(246, 16, 16, 0.09);
+				color: #d7263d;
+			}
+		}
+	}
+}
+
+.have-account {
+	font-weight: normal;
+	line-height: normal;
+	font-size: 16px;
+	color: #757575;
+	margin-top: 27px;
+	text-align: center;
+	a {
+		font-weight: 600;
+		line-height: normal;
+		font-size: 16px;
+		color: #2270ce;
+	}
+}

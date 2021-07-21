@@ -1,0 +1,283 @@
+.wallet-selector-page {
+	header {
+		overflow: hidden;
+		.hero-wrapper.hero-wrapper-inner {
+			margin-top: 48px;
+			padding-bottom: 24px;
+			.page-heading {
+				font-weight: bold;
+				line-height: 24px;
+				font-size: 32px;
+				text-align: center;
+				color: #ffffff;
+				margin-bottom: 20px;
+			}
+			.page-sub-heading {
+				font-weight: normal;
+				line-height: 12px;
+				font-size: 16px;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.8);
+				margin-bottom: 32px;
+			}
+			.search-bar {
+				position: relative;
+				input {
+					display: block;
+					width: 100%;
+					background: rgba(0, 0, 0, 0.15);
+					border-radius: 3px;
+					border: none;
+					font-weight: normal;
+					line-height: 11px;
+					font-size: 16px;
+					color: #ffffff;
+					opacity: 0.75;
+					padding: 13px 16px;
+					outline: none;
+					@include placeholder {
+						color: rgba(255, 255, 255, 0.8);
+					}
+				}
+				i {
+					position: absolute;
+					right: 16px;
+					top: 16px;
+					color: #ffffff;
+					opacity: 0.75;
+				}
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 40px;
+			}
+			@include media-breakpoint-down(xs) {
+				.page-heading {
+					line-height: 17px;
+					font-size: 24px;
+					margin-bottom: 24px;
+				}
+			}
+		}
+		&.bg-gradient.bg-primary-gradient::before,
+		&.bg-gradient.bg-primary-gradient::after {
+			content: none;
+		}
+	}
+	.wallet-dropdown-menu {
+		width: calc(100% - 30px);
+		overflow-y: auto;
+		max-height: 192px;
+		background: #ffffff;
+		box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.13);
+		border-radius: 3px;
+		padding: 0;
+		left: 15px;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #e7ecee;
+		}
+		&::-webkit-scrollbar-thumb,
+		&::-webkit-scrollbar-thumb:hover {
+			background: #0459c4;
+		}
+		.dropdown-item {
+			padding: 16px;
+			font-size: 16px;
+			line-height: 20px;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: flex;
+			cursor: pointer;
+			&:hover {
+				background: #f0f3f5;
+			}
+			&:active {
+				background: #f0f3f5;
+				color: #212529;
+			}
+			img {
+				width: 16px;
+				height: 16px;
+				margin-right: 8px;
+			}
+			.full-name {
+				flex-grow: 1;
+				line-height: 16px;
+			}
+			.name {
+				line-height: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+	.wallet-list {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		min-height: 810px;
+		@include media-breakpoint-down(md) {
+			margin-top: 18px;
+			margin-bottom: 18px;
+		}
+		& > .row > [class*='col-'] {
+			@include media-breakpoint-down(md) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		.wallet-selection {
+			background: #ffffff;
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+				0px 1px 2px rgba(0, 0, 0, 0.24);
+			border-radius: 3px;
+			margin-bottom: 32px;
+			@include media-breakpoint-down(md) {
+				margin-bottom: 20px;
+			}
+			.header {
+				text-align: center;
+				border-bottom: 1px solid #d5dce0;
+				img {
+					margin: 31px auto 26px;
+					height: 68px;
+					min-height: 68px;
+					@include media-breakpoint-down(sm) {
+						margin: 22px auto 21px;
+					}
+				}
+			}
+			.wallet-body {
+				padding: 8px 32px;
+				.wallet-prop {
+					font-weight: 600;
+					line-height: 12px;
+					font-size: 16px;
+					color: #1a1d1f;
+					padding: 22px 0 23px;
+					position: relative;
+					i.fa-plus {
+						color: #0459c4;
+						margin-right: 12px;
+					}
+					a {
+						cursor: pointer;
+						i.fa-eye {
+							color: #b0b9bd;
+							position: absolute;
+							right: 0;
+						}
+						&:hover {
+							i.fa-eye {
+								color: #0459c4;
+							}
+						}
+					}
+				}
+				hr {
+					border-top: 1px solid #e7ecee;
+				}
+			}
+			.btn-create {
+				display: block;
+				background: #e7ecee;
+				font-weight: 600;
+				line-height: 12px;
+				font-size: 16px;
+				color: #0459c4;
+				padding: 20px 32px 23px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.modal-add-wallet {
+	animation: modal-enter 0.5s;
+	max-width: 434px;
+	.modal-header {
+		padding: 14px 27px 9px 22px;
+		border-bottom: 1px solid #d5dce0;
+		img {
+			height: 41px;
+		}
+		button {
+			padding-top: 23px;
+			opacity: 1;
+			i {
+				color: #0459c4;
+			}
+		}
+	}
+	.modal-body {
+		padding: 0;
+		.search-coin {
+			background: #e7ecee;
+			padding: 8px 27px 8px 32px;
+			input {
+				border: none;
+				width: 100%;
+				background: none;
+				outline: none;
+				color: #515c61;
+			}
+			i {
+				position: absolute;
+				right: 27px;
+				top: 16px;
+				color: #515c61;
+			}
+		}
+		.coin-list {
+			height: 296px;
+			overflow: auto;
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #e7ecee;
+			}
+			&::-webkit-scrollbar-thumb,
+			&::-webkit-scrollbar-thumb:hover {
+				background: #0459c4;
+			}
+			.list-item {
+				font-weight: 600;
+				line-height: 13px;
+				font-size: 18px;
+				color: #1a1d1f;
+				padding: 16px 24px;
+				cursor: pointer;
+				transition: background 0.4s;
+				img {
+					height: 24px;
+					width: 24px;
+					margin-right: 12px;
+				}
+				&:hover {
+					background: #f0f3f5;
+				}
+			}
+		}
+		.create-wallet-link {
+			display: block;
+			text-decoration: none;
+			background: #0459c4;
+			font-weight: 600;
+			line-height: 12px;
+			font-size: 16px;
+			padding: 22px 32px;
+			cursor: pointer;
+			color: #fff;
+			@include media-breakpoint-down(sm) {
+				padding: 22px 24px;
+			}
+		}
+	}
+}

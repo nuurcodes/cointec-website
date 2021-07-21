@@ -1,0 +1,48 @@
+.home-section.security-section.container {
+	padding: 134px 15px 130px;
+	// padding: 122px 15px;
+	@include media-breakpoint-down(md) {
+		padding: 56px 30px 56px;
+	}
+	@include media-breakpoint-down(xs) {
+		padding: 56px 20px 56px;
+	}
+	.section-title {
+		margin-top: 16px;
+		font-weight: 600;
+		line-height: normal;
+		font-size: 24px;
+		color: #1a1d1f;
+		margin-bottom: 12px;
+		@include media-breakpoint-down(md) {
+			margin-top: 0;
+			margin-bottom: 48px;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 56px;
+		}
+	}
+	p {
+		line-height: 33px;
+		font-size: 16px;
+		margin-top: 0;
+		color: #515c61;
+		@include media-breakpoint-down(md) {
+			margin-top: 48px;
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-top: 26px;
+		}
+	}
+	img.security-lock {
+		width: 420px;
+		@include media-breakpoint-down(md) {
+			width: 350px;
+		}
+		@include media-breakpoint-down(xs) {
+			width: 300px;
+			max-width: 100%;
+		}
+	}
+}

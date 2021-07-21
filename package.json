@@ -1,0 +1,40 @@
+{
+	"name": "cointec",
+	"scripts": {
+		"dev": "node server",
+		"build": "next build",
+		"start": "NODE_ENV=production node server -p $PORT",
+		"heroku-postbuild": "npm run build"
+	},
+	"dependencies": {
+		"@zeit/next-sass": "^1.0.1",
+		"axios": "^0.18.0",
+		"bootstrap": "^4.1.3",
+		"chart.js": "^2.7.3",
+		"classnames": "^2.2.6",
+		"cryptocurrency-address-validator": "^0.1.3",
+		"es6-promise": "^4.2.5",
+		"express": "^4.16.4",
+		"express-sslify": "^1.2.0",
+		"file-saver": "^2.0.0",
+		"isomorphic-fetch": "^2.2.1",
+		"js-cookie": "^2.2.0",
+		"next": "^7.0.1",
+		"node-sass": "^4.12.0",
+		"react": "^16.5.2",
+		"react-chartjs-2": "^2.7.4",
+		"react-clipboard.js": "^2.0.1",
+		"react-dom": "^16.5.2",
+		"react-grecaptcha": "^1.2.5",
+		"react-moment": "^0.8.1",
+		"react-redux": "^5.0.7",
+		"redux": "^4.0.0",
+		"redux-form": "^7.4.2",
+		"redux-promise": "^0.6.0",
+		"redux-thunk": "^2.3.0"
+	},
+	"devDependencies": {
+		"@types/next": "^7.0.1",
+		"cross-env": "^5.2.0"
+	}
+}

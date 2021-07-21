@@ -1,0 +1,19 @@
+{
+    "name": "Cointec",
+    "short_name": "Cointec",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=WGLKXP2GJR",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=WGLKXP2GJR",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#045cc7",
+    "background_color": "#045cc7",
+    "display": "standalone"
+}

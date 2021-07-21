@@ -1,0 +1,239 @@
+.blog-page {
+	header {
+		overflow: hidden;
+		.hero-wrapper.hero-wrapper-inner {
+			padding-top: 48px;
+			padding-bottom: 48px;
+			margin: 0;
+			.page-heading {
+				font-weight: bold;
+				line-height: 24px;
+				font-size: 32px;
+				text-align: center;
+				color: #ffffff;
+				margin-bottom: 20px;
+			}
+			.page-sub-heading {
+				font-weight: normal;
+				line-height: 12px;
+				font-size: 16px;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.8);
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-down(xs) {
+				.page-heading {
+					line-height: 17px;
+					font-size: 24px;
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.bg-gradient.bg-primary-gradient::before,
+		&.bg-gradient.bg-primary-gradient::after {
+			content: none;
+		}
+	}
+	.blog-list {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		min-height: 810px;
+		@include media-breakpoint-down(md) {
+			margin-top: 18px;
+			margin-bottom: 18px;
+		}
+		& > .row > [class*='col-'] {
+			@include media-breakpoint-down(md) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		.blog-item {
+			height: 482px;
+			position: relative;
+			background: #ffffff;
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+				0px 1px 2px rgba(0, 0, 0, 0.24);
+			border-radius: 3px;
+			margin-bottom: 32px;
+			@include media-breakpoint-down(lg) {
+				height: 445px;
+			}
+			@include media-breakpoint-down(md) {
+				height: 482px;
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-down(sm) {
+				height: 570px;
+			}
+			@include media-breakpoint-down(xs) {
+				height: 528px;
+			}
+			.header {
+				text-align: center;
+				height: 217px;
+				display: flex;
+				background-size: cover;
+				background-position: center;
+				img {
+					margin: auto;
+					width: 100%;
+				}
+				@include media-breakpoint-down(lg) {
+					height: 180px;
+				}
+				@include media-breakpoint-down(md) {
+					height: 211px;
+				}
+				@include media-breakpoint-down(sm) {
+					height: 310px;
+				}
+				@include media-breakpoint-down(xs) {
+					height: 272px;
+					img {
+						height: 100%;
+					}
+				}
+			}
+			.blog-item-body {
+				padding: 32px 32px;
+				.blog-title {
+					margin-bottom: 7px;
+					// margin-bottom: 24px;
+					max-height: 68px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					a {
+						font-weight: 600;
+						line-height: 34px;
+						font-size: 24px;
+						color: #1a1d1f;
+						text-decoration: none;
+					}
+				}
+				.blog-description {
+					font-weight: normal;
+					line-height: 26px;
+					font-size: 16px;
+					color: #667075;
+					max-height: 52px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+
+				.contributor {
+					img {
+						height: 52px;
+						width: 52px;
+						border-radius: 50%;
+					}
+				}
+			}
+			.footer {
+				padding: 32px;
+				position: absolute;
+				bottom: 0;
+				img {
+					margin-top: 4px;
+					height: 48px;
+					width: 48px;
+					border-radius: 50%;
+					margin-right: 16px;
+				}
+				a,
+				time {
+					line-height: 20px;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.modal-add-wallet {
+	animation: modal-enter 0.5s;
+	max-width: 434px;
+	.modal-header {
+		padding: 14px 27px 9px 22px;
+		border-bottom: 1px solid #d5dce0;
+		img {
+			height: 41px;
+		}
+		button {
+			padding-top: 23px;
+			opacity: 1;
+			i {
+				color: #0459c4;
+			}
+		}
+	}
+	.modal-body {
+		padding: 0;
+		.search-coin {
+			background: #e7ecee;
+			padding: 8px 27px 8px 32px;
+			input {
+				border: none;
+				width: 100%;
+				background: none;
+				outline: none;
+				color: #515c61;
+			}
+			i {
+				position: absolute;
+				right: 27px;
+				top: 16px;
+				color: #515c61;
+			}
+		}
+		.coin-list {
+			max-height: 296px;
+			overflow: auto;
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #e7ecee;
+			}
+			&::-webkit-scrollbar-thumb,
+			&::-webkit-scrollbar-thumb:hover {
+				background: #0459c4;
+			}
+			.list-item {
+				font-weight: 600;
+				line-height: 13px;
+				font-size: 18px;
+				color: #1a1d1f;
+				padding: 16px 24px;
+				cursor: pointer;
+				transition: background 0.4s;
+				img {
+					height: 24px;
+					width: 24px;
+					margin-right: 12px;
+				}
+				&:hover {
+					background: #f0f3f5;
+				}
+			}
+		}
+		.blockchain-tracker {
+			background: #0459c4;
+			font-weight: 600;
+			line-height: 12px;
+			font-size: 16px;
+			padding: 22px 32px;
+			cursor: pointer;
+			color: #fff;
+			@include media-breakpoint-down(sm) {
+				padding: 22px 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.get-started.container {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.section-title {
+		line-height: 19px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 8px;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 15px;
+		}
+	}
+	.get-started-card {
+		background: #fff;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+		border-radius: 3px;
+		padding: 45px 40px 48px;
+		&:hover {
+			box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.13);
+		}
+		img {
+			width: auto;
+			height: 110px;
+			@include media-breakpoint-down(xs) {
+				height: 140px;
+			}
+		}
+		h5 {
+			margin-top: 28px;
+			margin-bottom: 24px;
+			font-weight: 600;
+			line-height: 16px;
+			font-size: 20px;
+			color: #1a1d1f;
+			@include media-breakpoint-down(md) {
+				margin-top: 24px;
+				line-height: 27px;
+				margin-bottom: 12px;
+			}
+			@include media-breakpoint-down(xs) {
+				margin-top: 21px;
+			}
+		}
+		p {
+			line-height: 28px;
+			margin-bottom: 22px;
+			color: #667075;
+			@include media-breakpoint-down(md) {
+				margin-bottom: 18px;
+			}
+			@include media-breakpoint-down(xs) {
+				margin-bottom: 14px;
+			}
+		}
+		a {
+			display: block;
+			line-height: 12px;
+			font-weight: 600;
+			color: #0459c4;
+		}
+		@include media-breakpoint-down(md) {
+			padding: 40px 70px;
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 35px 32px 48px;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		padding: 56px 20px 48px;
+	}
+	@include media-breakpoint-down(xs) {
+		padding: 56px 20px 32px;
+	}
+}

@@ -1,0 +1,55 @@
+.start-buying-wrapper {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 72px;
+	margin-bottom: 72px;
+	@include media-breakpoint-down(md) {
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+	.start-buying-title {
+		font-weight: 600;
+		font-size: 24px;
+		margin-bottom: 32px;
+		line-height: 19px;
+		@include media-breakpoint-down(xs) {
+			font-size: 24px;
+		}
+	}
+	.start-buying-email-wrapper {
+		input {
+			@include media-breakpoint-down(xs) {
+				outline: none;
+				box-shadow: none;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				max-height: 42px;
+				line-height: 1.5;
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 0;
+		}
+	}
+	.btn-outline-success {
+		color: #fff;
+		font-weight: 600;
+		line-height: 25px;
+		border-color: #fff;
+		border-radius: 3px;
+		&:hover {
+			border-color: $success;
+		}
+		@include media-breakpoint-down(xs) {
+			outline: none;
+			box-shadow: none;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			max-height: 42px;
+			line-height: 1.5;
+		}
+	}
+	.status-message {
+		position: absolute;
+		width: 100%;
+	}
+}
