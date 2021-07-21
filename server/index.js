@@ -40,9 +40,9 @@ app
 			}
 		})
 
-		server.get('/transaction-tracker/:txnID', (req, res) => {
-			app.render(req, res, '/transaction-tracker', { txnID: req.params.txnID })
-		})
+		// server.get('/transaction-tracker/:txnID', (req, res) => {
+		// 	app.render(req, res, '/transaction-tracker', { txnID: req.params.txnID })
+		// })
 
 		server.get('/learn/:pathname', (req, res) => {
 			app.render(req, res, `/${req.params.pathname}`)
@@ -64,13 +64,13 @@ app
 			})
 		})
 
-		server.get('/report-fraud', (req, res) => {
-			app.render(req, res, `/on-load`, {
-				action: req.query.action,
-				token: req.query.token,
-				method: 'report-fraud'
-			})
-		})
+		// server.get('/report-fraud', (req, res) => {
+		// 	app.render(req, res, `/on-load`, {
+		// 		action: req.query.action,
+		// 		token: req.query.token,
+		// 		method: 'report-fraud'
+		// 	})
+		// })
 
 		server.get('/token-expired/:action', (req, res) => {
 			app.render(req, res, `/token-expired`, {
@@ -84,13 +84,13 @@ app
 			})
 		})
 
-		server.get('/account-frozen', (req, res) => {
-			app.render(req, res, `/no-access`, { type: 'locked' })
-		})
+		// server.get('/account-frozen', (req, res) => {
+		// 	app.render(req, res, `/no-access`, { type: 'locked' })
+		// })
 
-		server.get('/account-closed', (req, res) => {
-			app.render(req, res, `/no-access`, { type: 'closed' })
-		})
+		// server.get('/account-closed', (req, res) => {
+		// 	app.render(req, res, `/no-access`, { type: 'closed' })
+		// })
 
 		server.get('/aml-kyc-policy', (req, res) => {
 			app.render(req, res, `/security`)
